@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+}
+
+.Head {
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.row {
+    margin: 0 -8px;
+}
+
+.col-one {
+    width: 100%;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.clear {
+    overflow: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.btn {
+    outline: none;
+    padding: 10px 12px;
+    margin-left: 10px;
+}
+
+/* Header  */
+.header {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0, #243652, #091932);
+    height: 46px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 24px;
+    display: block;
+    line-height: 46px;
+}
+
+.header .nav li:hover a {
+    background: linear-gradient(to right, pink, rgb(114, 114, 224));
+    transition: all 0.3s;
+    color: #333;    
+    border-radius: 3px;
+}
+
+.header .Logo {
+    line-height: 46px;
+    letter-spacing: 3px;
+    font-size: 17px;
+    color: #fff;
+    padding: 0 8px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav li:last-child {
+    margin-right: 0;
+}
+
+.Logo {
+    margin-left: auto;
+    padding: 10px;
+}
+.header .Logo:hover p {
+    display: block;
+    color: pink;
+    transition: all 0.9s;
+    cursor: pointer;
+} 
+
+
+/* slider  */
+.slider {
+    position: relative;
+    /* margin-top: 26px; */
+    background: url('../image/bg.jpg') top center / cover no-repeat;
+    padding-top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slider__content {
+    position: absolute;
+    bottom: 47px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.slider__heading {
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    color: #e58695;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.slider__dsc {
+    text-align: center;
+    margin-top: 10px;
+    color: #e58695;
+}
+
+.slide_img {
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+}
+
+.slider img {
+    right: 0;
+    border-radius: 3px;
+    height: 300px;
+    width: 300px;
+}
+
+@keyframes Move {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* about me  */
+.about-me-section {
+    background-color: rgb(186, 234, 218);
+}
+
+.content-section {
+    padding: 80px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.content-section__heading {
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.content-section__dsc {
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.content-section__para {
+    opacity: 0.8;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+.img {
+    margin-top: 10px;
+    width: 180px;
+    border-radius: 3px;
+}
+
+.img-self {
+    width: 300px;
+}
+
+/* my family  */
+.member-list {
+    margin-top: 40px;
+}
+
+.my-family {
+    background-color: #091932;
+}
+
+.body-member {
+    background-color: #fff;
+    padding: 14px;
+}
+
+.img-member {
+    width: 100%;
+    display: block;
+}
+
+.body-member__btn {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background-color: #091932;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.body-member__btn:hover {
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* contact  */
+.contact-section {
+    background-color: rgb(186, 234, 218);
+}
+
+.contact-content {
+    margin-top: 40px;
+}
+
+.contact-content i[class*="ti-"] {
+    display: inline-block;
+    width: 27px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-content .anchol-info {
+    text-decoration: none;
+    color: #00f;
+}
+
+.input_contact {
+    width: 100%;
+    outline: none;
+    margin-top: 10px;
+    display: block;
+    padding: 10px 12px;
+    background-color: #ddd;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn_contact {
+    margin-top: 15px;
+    padding: 10px 12px;
+    background-color: #091932;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn_contact:hover {
+    background: linear-gradient(to right, pink, rgb(114, 114, 224));
+    transition: all 0.3s;
+    color: #091932;
+    cursor: pointer;
+}
+
+/* Thong bao loi  */
+.errorBox_contact {
+    background-color: transparent !important;
+    display: none;
+    margin-top: 15px;
+    color: red;
+}
+
+.errorBox_contact i {
+    font-size: 18px;
+}
+
+#errorBox {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* footer  */
+.footer img {
+    width: 100%;
+}
+
+.text-footer {
+    font-size: 15px;
+    opacity: 0.8;
+    letter-spacing: 3px;
+}
+
+.anchol-footer {
+    text-decoration: none;
+    color: #00f;
+}
+
+.content-footer {
+    margin: 50px auto 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/*  card dili */
+.open {
+    display: flex !important;
+}
+
+.ani {
+    animation: Move linear 0.3s;
+}
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+.card-container-dili {
+    width: 400px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+    background-color: #222;
+    position: relative;
+    border-radius: 5px;
+    height: 550px;
+}
+
+.cover-card {
+    padding: 20px;
+}
+
+.close-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    padding: 10px;
+    color: #fff;
+}
+
+.close-card:hover {
+    color: #7ce3ff;
+    transition: linear 0.3s;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* image card  */
+.image {
+    background: url('../image/background.jpg');
+    position: relative;
+    background-size: cover;
+    height: 180px;
+    border-radius: 5px 5px 0 0;
+}
+
+.image-dili {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    bottom: -60px;
+    left: 15px;
+    border-radius: 50%;
+    border: 2px solid #222;
+    background: #222;
+    padding: 5px;
+}
+
+.body-card {
+    width: 350px;
+    padding: 15px;
+}
+
+.content-card {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+}
+
+.NAME {
+    font-size: 30px;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.BODY {
+    margin-top: 70px;
+    color: #fff;
+}
+
+.icons {
+    width: 180px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons i {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.icons i:hover {
+    color: #7ce3ff;
+}
+
+/* Pass input logo  */
+.pass_input_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+.body_input {
+    padding: 10px;
+    border-radius: 3px;
+    background: #ffd;
+    color: #091932;
+}
+
+.pass_input {
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.error_box_input {
+    display: none;
+    background-color: #fff;
+    margin-top: 15px;
+    color: red;
+}
+
+.error_box_input i {
+    font-size: 18px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .nav li {
+        margin: 10px 0;
+    }
+
+    .slider {
+        padding-top: 75%;
+    }
+
+    .content-section {
+        padding: 40px;
+        width: 100%;
+    }
+
+    .img-self, .img-member {
+        width: 100%;
+    }
+
+    .member-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-content .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-container-dili {
+        width: 90%;
+        height: auto;
+    }
+
+    .body-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,101 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111115;
+}
+.container {
+    height: 400px;
+    position: relative;
+}
+.body{
+    width: 175px;
+    height: 260px;
+    background: #eee;
+    position:relative;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    animation: float 2s ease-in-out infinite alternate;
+    margin-top: 0px;
+}
+.body:after {
+   content: '';
+   position: absolute;
+   width:23px;
+   height:44px;
+   border-radius: 30px;
+   background-color: #eee;
+   bottom:-18px;
+   border: 1px solid #eee;
+   box-shadow: 25px -10px #aaa,50px 15px #eee,75px 0px #bbb,100px 10px #eee,
+   125px -3px #bbb,150px 5px #eee;
+   z-index:0;
+}
+.eye{
+    width: 35px;
+    height: 30px;
+    background: #111115;
+    margin: 60px 15px 15px 25px;
+    border-radius:5px 5px 100% 100%;
+    display:inline-block;
+    transition: border-radius 05s ease-in-out, height 0.5s ease-in-out;
+}
+.mouth{
+    width: 45px;
+    height: 20px;
+    background: #111115;
+    margin:auto 40%;
+    border-radius:0 100% 100%;
+    transition:border-radius 0.5s ease-in-out;
+}
+.body:hover .mouth{
+    border-radius: 0 0 100% 40%;
+}
+.arm{
+    position: absolute;
+    background: #eee;
+    width: 65px;
+    height: 45px;
+    border-radius: 80% 10% 75% 80%;
+    top:50%
+}
+.body:hover .left{
+  transform:rotate(45deg) scaleY(-1);
+}
+.body:hover .right{
+  transform:rotate(-45deg) scaleY(-1);
+}
+.left {
+    left:-20%;
+    transform:rotate(-45deg); 
+}
+.right{
+    right:-20%;
+    -webkit-transform: scaleX(-1) rotate(-45deg);
+    transform:scaleX(-1) rotate(-45deg);
+}
+.shadow{
+    position: absolute;
+    background: #222;
+    width: 175px;
+    height: 40px;
+    bottom:0%;
+    border-radius: 100%;
+    animation: enlarge 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    from {
+        margin-top: 0px;
+    } to {
+        margin-top: 50px;
+    }
+}
+@keyframes enlarge {
+    from {
+        padding:0px;
+    } to {
+        padding:5px;
+    }
+}
